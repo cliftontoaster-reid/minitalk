@@ -1,0 +1,3 @@
+[submodule "modules/libft"]
+	path = modules/libft
+	url = https://github.com/cliftontoaster-reid/libft
