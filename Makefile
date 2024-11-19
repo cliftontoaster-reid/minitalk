@@ -33,6 +33,7 @@ $(CNAME): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 libft/libft.a:
+	git submodule update --init --recursive
 	cd ./libft && make && cd ../
 
 clean:
