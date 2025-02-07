@@ -6,11 +6,12 @@
 /*   By: lfiorell <lfiorell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:23 by lfiorell          #+#    #+#             */
-/*   Updated: 2025/02/07 16:38:52 by lfiorell         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:04:06 by lfiorell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define _POSIX_C_SOURCE 199506L
+#include "brand.h"
 #include "libft.h"
 #include "sig.h"
 #include <signal.h>
@@ -62,6 +63,7 @@ int	main(void)
 	int					pid;
 	struct sigaction	sa;
 
+	print_toast();
 	pid = getpid();
 	ft_printf("Server PID: %d\n", pid);
 	sa.sa_flags = SA_SIGINFO;
