@@ -6,7 +6,7 @@
 /*   By: lfiorell <lfiorell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 15:55:23 by lfiorell          #+#    #+#             */
-/*   Updated: 2025/02/07 16:31:27 by lfiorell         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:38:52 by lfiorell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	binary_to_char(int *binary)
 
 static void	shandler(int signum, siginfo_t *info, void *ucontext)
 {
-		char c;
+	char	c;
 
 	(void)ucontext;
 	if (signum == SIGUSR1 || signum == SIGUSR2)
@@ -50,7 +50,7 @@ static void	shandler(int signum, siginfo_t *info, void *ucontext)
 		g_sig.i = 0;
 		c = binary_to_char(g_sig.binary);
 		if (c == '\0')
-			ft_putchar_fd('\n', 1); // Don't print a null char, just a newline.
+			ft_putchar_fd('\n', 1);
 		else
 			ft_putchar_fd(c, 1);
 	}
